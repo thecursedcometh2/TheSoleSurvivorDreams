@@ -38,7 +38,7 @@ inline constexpr auto catalog = std::to_array<Dream>({
     {"CarryWeight", -10.0F, "-10 CarryWeight", R"dream([TODO: Write your -10 CarryWeight dream here.])dream"}, // -10 CarryWeight for 12 game hours
 });
 inline constexpr double durationHours = 12.0;
-inline constexpr unsigned chancePercent = 100;
+inline constexpr unsigned chancePercent = 15;
 // Use a uniform roll in [0,99]; selection is uniform over every catalog entry.
 inline std::optional<std::size_t> select(unsigned roll, std::size_t choice) {
     if (roll >= chancePercent || choice >= catalog.size()) return std::nullopt;
